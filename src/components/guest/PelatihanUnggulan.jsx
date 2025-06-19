@@ -6,10 +6,10 @@ import gdata from '../assets/images/gdata.png';
 export default function PelatihanUnggulan() {
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-bold text-center mt-10">
+      <h1 className="text-5xl text-center text-black font-bold mt-10">
         Pelatihan <span className="text-blue-500">Unggulan</span>
       </h1>
-      <p className="text-md sm:text-lg text-gray-500 text-center mt-3 mb-8 max-w-xl">
+      <p className="text-2xl text-center text-gray-600 my-5 max-w-2xl">
         Program pelatihan terbaik yang tersedia untuk meningkatkan keterampilan Anda
       </p>
 
@@ -21,23 +21,21 @@ export default function PelatihanUnggulan() {
           imgSrc={gkepemimpinan}
           label="Populer"
           badgeColor="bg-yellow-400 text-white"
-          category="Kepemimpinan"
+          category="Manajemen"
           rating="4.8"
-          color="bg-blue-500 text-white"
+          durasi="3 hari (24 jam)"
         />
-
         <CardPelatihanUnggulan
           h2="Komunikasi Efektif dalam Tim"
           p="Tingkatkan keterampilan komunikasi Anda untuk kolaborasi"
           harga="1.800.000"
           imgSrc={gtim}
-          label="Soft Skills"
+          label="Soft Skill"
           badgeColor="bg-green-400 text-white"
           category="Soft Skill"
           rating="4.6"
-          color="bg-green-500 text-white"
+          durasi="2 hari (16 jam)"
         />
-
         <CardPelatihanUnggulan
           h2="Analisis Data untuk Pengambilan Keputusan"
           p="Pelajari cara menganalisis data secara efektif untuk mendukung keputusan bisnis"
@@ -47,7 +45,7 @@ export default function PelatihanUnggulan() {
           badgeColor="bg-red-400 text-white"
           category="Data"
           rating="4.9"
-          color="bg-red-500 text-white"
+          durasi="4 hari (32 jam)"
         />
       </div>
 
@@ -55,9 +53,14 @@ export default function PelatihanUnggulan() {
         Lihat Semua Pelatihan
       </a>
 
-      <h2 className="text-xl text-blue-500 font-semibold mt-16">Dipercaya Oleh Perusahaan Terkemuka</h2>
+      <h2 className="text-xl text-blue-500 font-semibold mt-16">
+        Dipercaya Oleh Perusahaan Terkemuka
+      </h2>
       <div className="flex flex-wrap justify-center gap-4 mt-6">
-        {/* Tambahkan logo perusahaan jika ada */}
+        <img src="" alt="logo1" />
+        <img src="" alt="logo2" />
+        <img src="" alt="logo3" />
+        <img src="" alt="logo4" />
       </div>
     </div>
   );

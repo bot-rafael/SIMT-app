@@ -29,9 +29,7 @@ export default function HeroSection() {
             {/* Main Heading */}
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                Tingkatkan
-                <span className="block text-yellow-300">keterampilan</span>
-                <span className="text-white">& karir Anda</span>
+                Tingkatkan <span className="block text-yellow-300">keterampilan</span> & karir Anda
               </h1>
             </div>
 
@@ -91,7 +89,7 @@ export default function HeroSection() {
               <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-green-400 rounded-full animate-bounce delay-300"></div>
               <div className="absolute -bottom-6 -right-6 w-6 h-6 bg-purple-400 rounded-full animate-ping"></div>
               
-              {/* Main Image with only 1 glass effect */}
+              {/* Main Image */}
               <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
                 <img 
                   src={g1} 
@@ -101,9 +99,9 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
-
     </div>
   );
 }

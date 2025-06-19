@@ -9,12 +9,13 @@ import gteknis from '../assets/images/gteknis.png';
 export default function KategoriPelatihan() {
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-3xl font-semibold mt-5 text-center">
+      <h1 className="text-4xl font-bold text-center mt-10">
         Kategori <span className="text-blue-500">Pelatihan</span>
       </h1>
-      <p className="text-sm text-gray-500 mt-2 mb-5 text-center">
+      <p className="text-md text-gray-500 text-center mt-2 mb-6">
         Jelajahi berbagai kategori pelatihan yang tersedia
       </p>
+
       <div className="flex flex-wrap justify-center gap-4">
         <CardKategoriPelatihan h2="Berbicara" p="12 Pelatihan" imgSrc={gberbicara} />
         <CardKategoriPelatihan h2="Soft Skill" p="18 Pelatihan" imgSrc={gsoftskill} />

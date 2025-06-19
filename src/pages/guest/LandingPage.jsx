@@ -2,10 +2,13 @@ import React from 'react';
 import HeroSection from '../../components/guest/HeroSection';
 import KategoriPelatihan from '../../components/guest/KategoriPelatihan';
 import PelatihanUnggulan from '../../components/guest/PelatihanUnggulan';
+import TestimoniSection from '../../components/guest/TestimoniSection';
+import BenefitSection from '../../components/guest/BenefitSection';
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen w-full">
+
       {/* Hero Section */}
       <section className="relative">
         <HeroSection />
@@ -26,7 +29,7 @@ export default function LandingPage() {
             />
           </svg>
         </div>
-        
+
         <div className="relative z-10 py-16 md:py-24">
           <KategoriPelatihan />
         </div>
@@ -37,6 +40,30 @@ export default function LandingPage() {
         <div className="relative z-10 py-16 md:py-24">
           <PelatihanUnggulan />
         </div> 
+      </section>
+
+      {/* Benefit Section */}
+      <section className="bg-white grid place-items-center">
+        <BenefitSection />
+      </section>
+
+      {/* Konsultasi Section */}
+      <section className="bg-blue-100 flex flex-col lg:flex-row p-10 gap-6 items-center">
+        <div className="lg:w-3/4 w-full text-center lg:text-left">
+          <h1 className="text-4xl text-blue-400 mb-4">Masih Bingung?</h1>
+          <p className="text-4xl md:text-6xl text-black font-bold">Konsultasi Gratis Langsung dengan Admin Edu Pro</p>
+          <button className="btn btn-xl rounded-2xl text-blue-400 border-white bg-white mt-10">
+            Konsultasi Gratis
+          </button>
+        </div>
+        <div className="lg:w-1/4 w-full flex justify-center">
+          <img src="" alt="Admin" className="w-80 h-80 object-contain bg-white rounded-full" />
+        </div>
+      </section>
+
+      {/* Testimoni Section */}
+      <section className="bg-white grid place-items-center p-16">
+        <TestimoniSection />
       </section>
     </div>
   );
