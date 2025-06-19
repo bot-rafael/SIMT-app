@@ -3,7 +3,7 @@ import CardKategoriPelatihan from '../common/CardKategoriPelatihan';
 export default function KategoriPelatihan() {
   return (
     <div className="flex flex-col">
-      <h1 className="text-5xl text-center text-black font-bold mt-10">Kategori Pelatihan</h1>
+      <h1 className="text-5xl text-center text-black font-bold mt-10">Kategori <span className="text-blue-500">Pelatihan</span></h1>
       <p className="text-3xl text-center text-black my-5">Jelajahi berbagai kategori pelatihan yang tersedia</p>
       <div className="flex flex-wrap sm:flex-wrap-reverse items-center">
         <CardKategoriPelatihan h2={'Berbicara'} p={'12 Pelatihan'} />

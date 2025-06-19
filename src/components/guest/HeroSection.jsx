@@ -5,7 +5,9 @@ export default function HeroSection() {
         <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" className="max-w-sm rounded-lg shadow-2xl" />
         <div className="ml-5">
           <p className="text-blue-500 text-center text-lg bg-white rounded-2xl  py-2  mr-150">Platform Manajemen Pelatihan #1 di Indonesia</p>
-          <h1 className="text-8xl font-bold">Tingkatkan keterampilan & karir Anda</h1>
+          <h1 className="text-8xl font-bold">
+            Tingkatkan <span className="text-yellow-200">keterampilan</span> & <span className="text-yellow-200">karir</span> Anda
+          </h1>
           <p className="text-2xl py-6">Akses ratusan program pelatihan berkualitas tinggi dari para ahli industri. Kembangkan potensi Anda dan raih kesuksesan karir.</p>
           <div className="mb-6">
             <button className="w-50 text-sm btn btn-xl text-blue-500 bg-white border-neutral-100 mx-2">Mulai Belajar</button>
