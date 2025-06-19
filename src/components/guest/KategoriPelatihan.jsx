@@ -1,17 +1,27 @@
 import CardKategoriPelatihan from '../common/CardKategoriPelatihan';
+import gberbicara from '../assets/images/gberbicara.png';
+import gdigital from '../assets/images/gdigital.png';
+import gkeuangan from '../assets/images/gkeuangan.png';
+import gmanajemen from '../assets/images/gmanajemen.png';
+import gsoftskill from '../assets/images/gsoftskill.png';
+import gteknis from '../assets/images/gteknis.png';
 
 export default function KategoriPelatihan() {
   return (
-    <div className="flex flex-col">
-      <h1 className="text-5xl text-center text-black font-bold mt-10">Kategori Pelatihan</h1>
-      <p className="text-3xl text-center text-black my-5">Jelajahi berbagai kategori pelatihan yang tersedia</p>
-      <div className="flex flex-wrap sm:flex-wrap-reverse items-center">
-        <CardKategoriPelatihan h2={'Berbicara'} p={'12 Pelatihan'} />
-        <CardKategoriPelatihan h2={'Soft Skill'} p={'18 Pelatihan'} />
-        <CardKategoriPelatihan h2={'Teknisi'} p={'15 Pelatihan'} />
-        <CardKategoriPelatihan h2={'Manajemen'} p={'20 Pelatihan'} />
-        <CardKategoriPelatihan h2={'Keuangan'} p={'8 Pelatihan'} />
-        <CardKategoriPelatihan h2={'Digital'} p={'14 Pelatihan'} />
+    <div className="flex flex-col items-center">
+      <h1 className="text-3xl font-semibold mt-5 text-center">
+        Kategori <span className="text-blue-500">Pelatihan</span>
+      </h1>
+      <p className="text-sm text-gray-500 mt-2 mb-5 text-center">
+        Jelajahi berbagai kategori pelatihan yang tersedia
+      </p>
+      <div className="flex flex-wrap justify-center gap-4">
+        <CardKategoriPelatihan h2="Berbicara" p="12 Pelatihan" imgSrc={gberbicara} />
+        <CardKategoriPelatihan h2="Soft Skill" p="18 Pelatihan" imgSrc={gsoftskill} />
+        <CardKategoriPelatihan h2="Teknis" p="15 Pelatihan" imgSrc={gteknis} />
+        <CardKategoriPelatihan h2="Manajemen" p="20 Pelatihan" imgSrc={gmanajemen} />
+        <CardKategoriPelatihan h2="Keuangan" p="8 Pelatihan" imgSrc={gkeuangan} />
+        <CardKategoriPelatihan h2="Digital" p="14 Pelatihan" imgSrc={gdigital} />
       </div>
     </div>
   );
