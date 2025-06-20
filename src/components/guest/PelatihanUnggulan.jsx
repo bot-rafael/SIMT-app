@@ -1,7 +1,7 @@
 import CardPelatihanUnggulan from '../common/CardPelatihanUnggulan';
-import gkepemimpinan from '../assets/images/gkepemimpinan.png';
-import gtim from '../assets/images/gtim.png';
-import gdata from '../assets/images/gdata.png';
+import gkepemimpinan from '../../assets/images/gkepemimpinan.png';
+import gtim from '../../assets/images/gtim.png';
+import gdata from '../../assets/images/gdata.png';
 
 export default function PelatihanUnggulan() {
   return (
@@ -9,9 +9,7 @@ export default function PelatihanUnggulan() {
       <h1 className="text-5xl text-center text-black font-bold mt-10">
         Pelatihan <span className="text-blue-500">Unggulan</span>
       </h1>
-      <p className="text-2xl text-center text-gray-600 my-5 max-w-2xl">
-        Program pelatihan terbaik yang tersedia untuk meningkatkan keterampilan Anda
-      </p>
+      <p className="text-2xl text-center text-gray-600 my-5 max-w-2xl">Program pelatihan terbaik yang tersedia untuk meningkatkan keterampilan Anda</p>
 
       <div className="flex flex-wrap justify-center gap-6">
         <CardPelatihanUnggulan
@@ -49,13 +47,9 @@ export default function PelatihanUnggulan() {
         />
       </div>
 
-      <a className="mt-10 px-6 py-3 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 transition">
-        Lihat Semua Pelatihan
-      </a>
+      <a className="mt-10 px-6 py-3 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 transition">Lihat Semua Pelatihan</a>
 
-      <h2 className="text-xl text-blue-500 font-semibold mt-16">
-        Dipercaya Oleh Perusahaan Terkemuka
-      </h2>
+      <h2 className="text-xl text-blue-500 font-semibold mt-16">Dipercaya Oleh Perusahaan Terkemuka</h2>
       <div className="flex flex-wrap justify-center gap-4 mt-6">
         <img src="" alt="logo1" />
         <img src="" alt="logo2" />

@@ -1,10 +1,10 @@
 import CardKategoriPelatihan from '../common/CardKategoriPelatihan';
-import gberbicara from '../assets/images/gberbicara.png';
-import gdigital from '../assets/images/gdigital.png';
-import gkeuangan from '../assets/images/gkeuangan.png';
-import gmanajemen from '../assets/images/gmanajemen.png';
-import gsoftskill from '../assets/images/gsoftskill.png';
-import gteknis from '../assets/images/gteknis.png';
+import gberbicara from '../../assets/images/gberbicara.png';
+import gdigital from '../../assets/images/gdigital.png';
+import gkeuangan from '../../assets/images/gkeuangan.png';
+import gmanajemen from '../../assets/images/gmanajemen.png';
+import gsoftskill from '../../assets/images/gsoftskill.png';
+import gteknis from '../../assets/images/gteknis.png';
 
 export default function KategoriPelatihan() {
   return (

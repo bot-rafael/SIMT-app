@@ -1,4 +1,4 @@
-import g1 from '../assets/g1.png';
+import g1 from '../../assets/g1.png';
 
 export default function HeroSection() {
   return (
