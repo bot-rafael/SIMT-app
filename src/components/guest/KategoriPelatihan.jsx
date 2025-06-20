@@ -9,7 +9,7 @@ import gteknis from '../../assets/images/gteknis.png';
 export default function KategoriPelatihan() {
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-bold text-center mt-10">
+      <h1 className="text-5xl text-center text-black font-bold mt-10">
         Kategori <span className="text-blue-500">Pelatihan</span>
       </h1>
       <p className="text-md text-gray-500 text-center mt-2 mb-6">
