@@ -1,8 +1,8 @@
 import CardPelatihanUnggulan from '../common/CardPelatihanUnggulan';
-import gkepemimpinan from '../../assets/images/gkepemimpinan2.png';
-import gtim from '../../assets/images/gtim2.png';
+import gkepemimpinan2 from '../../assets/images/gkepemimpinan2.png';
+import gtim2 from '../../assets/images/gtim2.png';
 import gdata from '../../assets/images/gdata.png';
-import logope from '../../assets/images/logope2.png';
+import logope2 from '../../assets/images/logope2.png';
 
 export default function PelatihanUnggulan() {
   return (
@@ -19,7 +19,7 @@ export default function PelatihanUnggulan() {
           h2="Kepemimpinan Efektif di Era Digital"
           p="Pelajari strategi kepemimpinan modern untuk mengelola tim"
           harga="2.500.000"
-          imgSrc={gkepemimpinan}
+          imgSrc={gkepemimpinan2}
           label="Populer"
           badgeColor="bg-yellow-400 text-white"
           category="Manajemen"
@@ -30,7 +30,7 @@ export default function PelatihanUnggulan() {
           h2="Komunikasi Efektif dalam Tim"
           p="Tingkatkan keterampilan komunikasi Anda untuk kolaborasi"
           harga="1.800.000"
-          imgSrc={gtim}
+          imgSrc={gtim2}
           label="Soft Skill"
           badgeColor="bg-green-400 text-white"
           category="Soft Skill"
@@ -64,7 +64,7 @@ export default function PelatihanUnggulan() {
 
       <div className="bg-white rounded-xl shadow-md px-6 py-6 mt-6 w-full max-w-5xl mx-auto">
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
-          <img src={logope} alt="Logo PE" className="h-20 object-contain" />
+          <img src={logope2} alt="Logo PE" className="h-20 object-contain" />
         </div>
       </div>
     </div>
