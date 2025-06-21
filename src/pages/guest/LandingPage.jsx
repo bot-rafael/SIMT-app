@@ -48,7 +48,10 @@ export default function LandingPage() {
       </section>
 
        {/* Konsultasi Section - Now using the separate component */}
-      <KonsultasiSection />
+        <section className="relative">
+        <KonsultasiSection />
+        </section>
+      
 
        {/* Testimoni Section */}
       <section className="bg-white grid place-items-center p-16">
