@@ -11,7 +11,7 @@ const KonsultasiSection = () => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-blue-600">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-700 via-blue-600 to-blue-800">
         {/* Floating Shapes */}
         <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
         <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-bounce delay-300"></div>
@@ -151,3 +151,5 @@ const KonsultasiSection = () => {
     </motion.section>
   );
 };
+
+export default KonsultasiSection;
