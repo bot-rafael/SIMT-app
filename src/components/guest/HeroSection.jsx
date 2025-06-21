@@ -1,4 +1,4 @@
-import g1 from '../assets/g1.png';
+import g1 from '../../assets/g1.png';
 
 export default function HeroSection() {
   return (
@@ -11,11 +11,11 @@ export default function HeroSection() {
         <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-pink-400/15 rounded-full blur-2xl"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 m-10 ">
         <div className="flex flex-col lg:flex-row items-center justify-between min-h-screen">
           
           {/* Left Content */}
-          <div className="lg:w-1/2 text-white space-y-8 lg:pr-12">
+          <div className="lg:w-1/2 text-white space-y-8 lg:pl-12">
             
             {/* Badge */}
             <div className="inline-flex items-center">

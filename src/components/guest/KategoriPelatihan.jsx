@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import CardKategoriPelatihan from '../common/CardKategoriPelatihan';
-import gberbicara from '../assets/images/gberbicara.png';
-import gdigital from '../assets/images/gdigital.png';
-import gkeuangan from '../assets/images/gkeuangan.png';
-import gmanajemen from '../assets/images/gmanajemen.png';
-import gsoftskill from '../assets/images/gsoftskill.png';
-import gteknis from '../assets/images/gteknis.png';
+import gberbicara from '../../assets/images/gberbicara.png';
+import gdigital from '../../assets/images/gdigital.png';
+import gkeuangan from '../../assets/images/gkeuangan.png';
+import gmanajemen from '../../assets/images/gmanajemen.png';
+import gsoftskill from '../../assets/images/gsoftskill.png';
+import gteknis from '../../assets/images/gteknis.png';
 
 export default function KategoriPelatihan() {
   const categories = [
@@ -42,14 +42,13 @@ export default function KategoriPelatihan() {
   };
 
   return (
-   <section className="relative py-20 px-6 md:px-16 bg-white overflow-hidden">
-
+    <section className="relative py-20 px-6 md:px-16 bg-white overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full translate-x-48 -translate-y-48" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-blue-500/5 to-transparent rounded-full -translate-x-40 translate-y-40" />
-      
+
       {/* Floating elements */}
-      <div className="absolute top-20 left-1/4 w-3 h-3 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }} />
+      <div className="absolute top-20 left-1/4 w-3 h-3 bg-blue-400 rounded-full animate-bounce" />
       <div className="absolute top-40 right-1/3 w-2 h-2 bg-blue-300 rounded-full animate-bounce" style={{ animationDelay: '1s' }} />
       <div className="absolute bottom-32 left-1/3 w-2.5 h-2.5 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '2s' }} />
 
@@ -62,7 +61,7 @@ export default function KategoriPelatihan() {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-16"
         >
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-5xl font-bold text-gray-800 mb-4"
             whileHover={{ scale: 1.02 }}
           >
@@ -77,8 +76,8 @@ export default function KategoriPelatihan() {
               />
             </span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -89,7 +88,7 @@ export default function KategoriPelatihan() {
             <span className="font-semibold text-blue-600">kariermu</span>
           </motion.p>
 
-          {/* Stats section */}
+          {/* Stats */}
           <motion.div
             className="flex justify-center items-center gap-8 mt-8"
             initial={{ opacity: 0, y: 30 }}
@@ -141,13 +140,13 @@ export default function KategoriPelatihan() {
             <motion.div
               key={index}
               variants={{
-                hidden: { 
-                  opacity: 0, 
+                hidden: {
+                  opacity: 0,
                   y: 50,
                   rotateX: -15
                 },
-                visible: { 
-                  opacity: 1, 
+                visible: {
+                  opacity: 1,
                   y: 0,
                   rotateX: 0,
                   transition: {
@@ -164,7 +163,7 @@ export default function KategoriPelatihan() {
           ))}
         </motion.div>
 
-        {/* Call to Action */}
+        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -173,7 +172,7 @@ export default function KategoriPelatihan() {
           className="text-center mt-16"
         >
           <motion.button
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
               boxShadow: '0px 15px 30px rgba(59, 130, 246, 0.3)'
             }}

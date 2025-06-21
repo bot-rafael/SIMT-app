@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 
 export default function CardKategoriPelatihan({ h2, p, imgSrc, index }) {
+  const interestPercent = Math.floor(Math.random() * 30) + 70;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 60, scale: 0.9 }}
@@ -45,8 +47,6 @@ export default function CardKategoriPelatihan({ h2, p, imgSrc, index }) {
         >
           Popular
         </motion.div>
-        
-        
       </div>
 
       {/* Content section */}
@@ -59,7 +59,7 @@ export default function CardKategoriPelatihan({ h2, p, imgSrc, index }) {
           {h2}
         </motion.h2>
         
-        {/* Description with icon */}
+        {/* Description */}
         <div className="flex items-center justify-between">
           <motion.p 
             className="text-gray-600 font-medium"
@@ -74,14 +74,14 @@ export default function CardKategoriPelatihan({ h2, p, imgSrc, index }) {
           <div className="flex justify-between items-center mb-2">
             <span className="text-xs text-gray-500">Tingkat Minat</span>
             <span className="text-xs font-semibold text-blue-600">
-              {Math.floor(Math.random() * 30) + 70}%
+              {interestPercent}%
             </span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <motion.div
               className="bg-gradient-to-r from-blue-500 to-blue-400 h-2 rounded-full"
               initial={{ width: 0 }}
-              animate={{ width: `${Math.floor(Math.random() * 30) + 70}%` }}
+              animate={{ width: `${interestPercent}%` }}
               transition={{ delay: (index * 0.1) + 0.5, duration: 1 }}
             />
           </div>
