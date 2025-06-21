@@ -1,8 +1,8 @@
 import CardPelatihanUnggulan from '../common/CardPelatihanUnggulan';
-import gkepemimpinan from '../assets/images/gkepemimpinan.png';
-import gtim from '../assets/images/gtim.png';
-import gdata from '../assets/images/gdata.png';
-import logope from '../assets/images/logope.png'; // ✅ Logo perusahaan
+import gkepemimpinan from '../../assets/images/gkepemimpinan2.png';
+import gtim from '../../assets/images/gtim2.png';
+import gdata from '../../assets/images/gdata.png';
+import logope from '../../assets/images/logope2.png';
 
 export default function PelatihanUnggulan() {
   return (
@@ -50,7 +50,10 @@ export default function PelatihanUnggulan() {
         />
       </div>
 
-      <a className="mt-10 px-6 py-3 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 transition">
+      <a
+        href="#"
+        className="mt-10 px-6 py-3 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 transition"
+      >
         Lihat Semua Pelatihan
       </a>
 
@@ -61,7 +64,7 @@ export default function PelatihanUnggulan() {
 
       <div className="bg-white rounded-xl shadow-md px-6 py-6 mt-6 w-full max-w-5xl mx-auto">
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
-          <img src={logope} alt="Logo PE" className="h-20 md:h-24 object-contain" />
+          <img src={logope} alt="Logo PE" className="h-20 object-contain" />
         </div>
       </div>
     </div>
