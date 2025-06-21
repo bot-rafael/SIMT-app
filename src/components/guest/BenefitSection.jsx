@@ -129,18 +129,6 @@ export default function BenefitSection() {
               viewport={{ once: true }}
               transition={{ delay: 1.2, duration: 0.6 }}
             >
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="inline-flex items-center text-blue-500 font-medium"
-              >
-                <span className="mr-2">Mulai perjalanan kariermu sekarang</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 7H7a2 2 0 00-2 2v6a2 2 0 002 2h6a2 2 0 002-2v-6z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M14 2L20 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M14 2H20V8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </motion.div>
             </motion.div>
           </motion.div>
 

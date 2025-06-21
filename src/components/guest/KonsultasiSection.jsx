@@ -34,11 +34,6 @@ const KonsultasiSection = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white text-sm font-medium">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              Admin Online Sekarang
-            </div>
 
             {/* Main Heading */}
             <div className="space-y-3">
