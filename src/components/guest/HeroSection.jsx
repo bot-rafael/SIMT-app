@@ -2,8 +2,8 @@ import g1 from '../assets/g1.png';
 
 export default function HeroSection() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-purple-700 overflow-hidden">
-      
+    <div className="relative min-h-screen bg-blue-600 overflow-hidden">
+
       {/* Background decorative elements */}
       <div className="absolute inset-0 min-h-screen">
         <div className="absolute top-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>

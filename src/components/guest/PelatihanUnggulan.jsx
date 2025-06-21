@@ -2,6 +2,7 @@ import CardPelatihanUnggulan from '../common/CardPelatihanUnggulan';
 import gkepemimpinan from '../assets/images/gkepemimpinan.png';
 import gtim from '../assets/images/gtim.png';
 import gdata from '../assets/images/gdata.png';
+import logope from '../assets/images/logope.png'; // ✅ Import logo
 
 export default function PelatihanUnggulan() {
   return (
@@ -53,15 +54,16 @@ export default function PelatihanUnggulan() {
         Lihat Semua Pelatihan
       </a>
 
-      <h2 className="text-xl text-blue-500 font-semibold mt-16">
-        Dipercaya Oleh Perusahaan Terkemuka
-      </h2>
-      <div className="flex flex-wrap justify-center gap-4 mt-6">
-        <img src="" alt="logo1" />
-        <img src="" alt="logo2" />
-        <img src="" alt="logo3" />
-        <img src="" alt="logo4" />
-      </div>
+      {/* Bagian Logo Perusahaan */}
+<h2 className="text-xl text-blue-500 font-semibold mt-16 text-center">
+  Dipercaya Oleh Perusahaan Terkemuka
+</h2>
+
+<div className="bg-white rounded-xl shadow-md px-6 py-6 mt-6 w-full max-w-5xl mx-auto">
+  <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+    <img src={logope} alt="Logo PE" className="h-20 md:h-100 object-contain" />
+  </div>
+</div>
     </div>
   );
 }
