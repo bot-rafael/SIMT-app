@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import CardBenefit from '../common/CardBenefit';
+import gupto from '../../assets/images/gdah.png'; // contoh pengganti
+
 
 export default function BenefitSection() {
   const benefits = [
     {
-      icon: "gupto",
+      icon: gupto,
       title: 'Kelas Up-To-date',
       description: 'Materi belajar selalu update, jadi kamu gak ketinggalan tren terbaru di dunia kerja.',
     },
