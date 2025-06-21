@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 import CardBenefit from '../common/CardBenefit';
 import gupto from '../../assets/images/gdah.png'; // contoh pengganti
+import gbimbingan from '../../assets/images/gada.png'; // contoh pengganti
+import gbareng from '../../assets/images/gadaa.png'; // contoh pengganti
+import gfleksibel from '../../assets/images/gadaaa.png'; // contoh pengganti
+import gpeluang from '../../assets/images/gadaaaa.png'; // contoh pengganti
 
 
 export default function BenefitSection() {
@@ -11,22 +15,22 @@ export default function BenefitSection() {
       description: 'Materi belajar selalu update, jadi kamu gak ketinggalan tren terbaru di dunia kerja.',
     },
     {
-      icon: "gbimbingan",
+      icon: gbimbingan,
       title: 'Bimbingan Sampai Dapat Kerja',
       description: 'Gak cuman belajar, kamu juga bakal dibimbing sampai dapat kerja beneran!',
     },
     {
-      icon: "gbareng",
+      icon: gbareng,
       title: 'Belajar Bareng Mentor Pro',
       description: 'Dapat ilmu langsung dari mentor keren yang udah berpengalaman di industri.',
     },
     {
-      icon: "gfleksibel",
+      icon: gfleksibel,
       title: 'Belajar Fleksibel',
       description: 'Materi belajar fleksibel, jadi kamu bisa belajar kapan saja sesuai waktu yang kamu punya.',
     },
     {
-      icon: "gpeluang",
+      icon: gpeluang,
       title: 'Peluang Kerja Lebih Besar',
       description: 'Edu pro punya banyak mitra perusahaan, peluang kerja makin gede setelah lulus!',
     },
