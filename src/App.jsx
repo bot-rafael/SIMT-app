@@ -1,25 +1,30 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+/* Guest */
 import GuestLayout from './layouts/GuestLayout';
 import LandingPage from './pages/guest/LandingPage';
-// import Login from './pages/guest/Login';
+// import Login from './pages/guest/Login'; // contoh nanti kalau kamu mau login
+
+/* User */
+import UserLayout from './layouts/UserLayout';
+import Dashboard from './pages/user/Dashboard';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Guest Route */}
+        {/* Guest Routes */}
         <Route path="/" element={<GuestLayout />}>
           <Route index element={<LandingPage />} />
           {/* <Route path="login" element={<Login />} /> */}
         </Route>
 
-        {/* Contoh admin route (kalau nanti kamu pakai layout admin) */}
-        {/*
-        <Route path="/admin" element={<AdminLayout />}>
+        {/* User Routes */}
+        <Route path="/dashboard" element={<UserLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="users" element={<Users />} />
+          {/* Tambahkan route lain kalau ada, seperti: */}
+          {/* <Route path="profile" element={<Profile />} /> */}
         </Route>
-        */}
       </Routes>
     </BrowserRouter>
   );

@@ -1,4 +1,3 @@
-import React from 'react';
 import HeroSection from '../../components/guest/HeroSection';
 import KategoriPelatihan from '../../components/guest/KategoriPelatihan';
 import PelatihanUnggulan from '../../components/guest/PelatihanUnggulan';
