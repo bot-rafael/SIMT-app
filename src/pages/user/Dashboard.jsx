@@ -47,7 +47,7 @@ export default function Dashboard() {
             className="mx-auto h-24"
           />
           <p className="mt-4 text-sm text-gray-600">
-            Anda belum memiliki aktivitas belajar di Dicoding Academy.
+            Anda belum memiliki aktivitas belajar di EduPro Learning Platform.
           </p>
           <button className="btn bg-black mt-4 px-4 py-2 text-white rounded-lg">Belajar sekarang</button>
         </div>
@@ -58,10 +58,10 @@ export default function Dashboard() {
         <h2 className="font-semibold text-lg mb-4">Aktivitas Lain</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <div className="p-4 border rounded-xl">
-            <p className="text-sm font-medium text-gray-700">Telusuri event dari Dicoding</p>
+            <p className="text-sm font-medium text-gray-700">Telusuri event dari EduPro</p>
           </div>
           <div className="p-4 border rounded-xl">
-            <p className="text-sm font-medium text-gray-700">Telusuri challenge dari Dicoding</p>
+            <p className="text-sm font-medium text-gray-700">Telusuri challenge dari EduPro</p>
           </div>
           <div className="p-4 border rounded-xl md:col-span-2">
             <p className="text-sm font-medium text-gray-700">Telusuri daftar pekerjaan dari perusahaan ternama</p>

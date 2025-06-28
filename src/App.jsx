@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 /* Guest */
 import GuestLayout from './layouts/GuestLayout';
 import LandingPage from './pages/guest/LandingPage';
-// import Login from './pages/guest/Login'; // contoh nanti kalau kamu mau login
+import Login from './pages/guest/Login';
+import Register from './pages/guest/Register';
 
 /* User */
 import UserLayout from './layouts/UserLayout';
@@ -16,14 +17,13 @@ function App() {
         {/* Guest Routes */}
         <Route path="/" element={<GuestLayout />}>
           <Route index element={<LandingPage />} />
-          {/* <Route path="login" element={<Login />} /> */}
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
 
         {/* User Routes */}
         <Route path="/dashboard" element={<UserLayout />}>
           <Route index element={<Dashboard />} />
-          {/* Tambahkan route lain kalau ada, seperti: */}
-          {/* <Route path="profile" element={<Profile />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
