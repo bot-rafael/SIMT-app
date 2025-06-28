@@ -10,6 +10,9 @@ import Register from './pages/guest/Register';
 import UserLayout from './layouts/UserLayout';
 import Dashboard from './pages/user/Dashboard';
 
+/* Protected Route */
+import ProtectedRoute from './components/ProtectedRoute';
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,8 +24,15 @@ function App() {
           <Route path="register" element={<Register />} />
         </Route>
 
-        {/* User Routes */}
-        <Route path="/dashboard" element={<UserLayout />}>
+        {/* User Routes (Protected) */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <UserLayout />
+            </ProtectedRoute>
+          }
+        >
           <Route index element={<Dashboard />} />
         </Route>
       </Routes>
