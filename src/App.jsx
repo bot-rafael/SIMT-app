@@ -9,6 +9,7 @@ import Register from './pages/guest/Register';
 /* User */
 import UserLayout from './layouts/UserLayout';
 import Dashboard from './pages/user/Dashboard';
+import ProfileForm from './pages/user/ProfileForm';
 
 /* Protected Route */
 import ProtectedRoute from './components/ProtectedRoute';
@@ -34,6 +35,10 @@ function App() {
           }
         >
           <Route index element={<Dashboard />} />
+          <Route path="profile" element={<ProfileForm />} />
+          {/* <Route path="academy" element={<Academy />} />
+          <Route path="challange" element={<challange />} />
+          <Route path="event" element={<event />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
