@@ -216,9 +216,11 @@ export default function Footer() {
               
               <div className="flex items-center gap-2 text-sm">
                 <span className="text-gray-400">Didesain dengan</span>
-                <span className="text-red-400">Laptop LOQ</span>
+                <span className="text-red-400">Mainan</span>
                 <span className="text-gray-400">oleh</span>
                 <span className="text-blue-400">@ditt </span>
+                <span className="text-gray-400">dan</span>
+                <span className="text-blue-400">@ell </span>
               </div>
             </div>
           </div>
