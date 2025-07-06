@@ -1,11 +1,17 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/logo2.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('Beranda');
+  const navigate = useNavigate();
 
-  const menuItems = ['Beranda', 'Pelatihan', 'Jadwal', 'Kontak'];
+  const menuItems = [
+    { name: 'Beranda', path: '/' },
+    { name: 'Pelatihan', path: '/pelatihan' },
+    { name: 'Kontak', path: '/kontak' },
+  ];
 
   return (
     <nav className="h-20 bg-white shadow-lg border-b border-gray-100 sticky top-0 z-50">
@@ -56,7 +62,6 @@ export default function Navbar() {
             >
               Daftar
             </button>
-
             <button
               onClick={() => navigate('/login')}
               className="px-6 py-2 bg-blue-500 text-white rounded-full font-medium hover:bg-blue-600 transition-all duration-300"
@@ -100,7 +105,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile Navigation */}
       <div
         className={`md:hidden transition-all duration-300 ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
@@ -137,7 +142,6 @@ export default function Navbar() {
               >
                 Daftar
               </button>
-
               <button
                 onClick={() => {
                   setIsOpen(false);
