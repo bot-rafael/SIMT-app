@@ -50,12 +50,7 @@ export default function PelatihanUnggulan() {
         />
       </div>
 
-      <a
-        href="#"
-        className="mt-10 px-6 py-3 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 transition"
-      >
-        Lihat Semua Pelatihan
-      </a>
+      
 
       {/* Bagian Logo Perusahaan */}
       <h2 className="text-xl text-blue-500 font-semibold mt-16 text-center">

@@ -171,23 +171,6 @@ export default function KategoriPelatihan() {
           transition={{ delay: 1.5, duration: 0.8 }}
           className="text-center mt-16"
         >
-          <motion.button
-            whileHover={{
-              scale: 1.05,
-              boxShadow: '0px 15px 30px rgba(59, 130, 246, 0.3)'
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Lihat Semua Pelatihan
-            <motion.span
-              className="inline-block ml-2"
-              animate={{ x: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              →
-            </motion.span>
-          </motion.button>
         </motion.div>
       </div>
     </section>

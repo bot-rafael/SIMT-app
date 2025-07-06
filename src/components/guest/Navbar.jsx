@@ -5,7 +5,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('Beranda');
 
-  const menuItems = ['Beranda', 'Pelatihan', 'Jadwal', 'Kontak'];
+  const menuItems = ['Beranda', 'Pelatihan', 'Testimoni', 'Kontak'];
 
   return (
     <nav className="h-20 bg-white shadow-lg border-b border-gray-100 sticky top-0 z-50">
