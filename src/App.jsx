@@ -5,6 +5,10 @@ import GuestLayout from './layouts/GuestLayout';
 import LandingPage from './pages/guest/LandingPage';
 import Login from './pages/guest/Login';
 import Register from './pages/guest/Register';
+import CourseDetailPage from './pages/guest/CourseDetailPage';
+import CourseDetailPage2 from './pages/guest/CourseDetailPage2';
+import CourseDetailPage3 from './pages/guest/CourseDetailPage3';
+import ScrollToTop from './components/guest/ScrollToTop';
 
 /* User */
 import UserLayout from './layouts/UserLayout';
@@ -17,12 +21,16 @@ import ProtectedRoute from './components/ProtectedRoute';
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         {/* Guest Routes */}
         <Route path="/" element={<GuestLayout />}>
           <Route index element={<LandingPage />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="detail/kepemimpinan" element={<CourseDetailPage />} />
+          <Route path="detail/komunikasi" element={<CourseDetailPage2 />} />
+          <Route path="detail/analisis-data" element={<CourseDetailPage3 />} />
         </Route>
 
         {/* User Routes (Protected) */}
@@ -36,9 +44,6 @@ function App() {
         >
           <Route index element={<Dashboard />} />
           <Route path="profile" element={<ProfileForm />} />
-          {/* <Route path="academy" element={<Academy />} />
-          <Route path="challange" element={<challange />} />
-          <Route path="event" element={<event />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
