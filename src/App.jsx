@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-/* Layouts */
+/* Lazy Load - Guest */
 import GuestLayout from './layouts/GuestLayout';
-import LandingPage from './pages/guest/LandingPage';
-import Login from './pages/guest/Login';
-import Register from './pages/guest/Register';
+const LandingPage = React.lazy(() => import('./pages/guest/LandingPage'));
+const Login = React.lazy(() => import('./pages/guest/Login'));
+const Register = React.lazy(() => import('./pages/guest/Register'));
 import CourseDetailPage from './pages/guest/CourseDetailPage';
 import CourseDetailPage2 from './pages/guest/CourseDetailPage2';
 import CourseDetailPage3 from './pages/guest/CourseDetailPage3';
@@ -16,11 +16,6 @@ import UserLayout from './layouts/UserLayout';
 
 /* Protected */
 import ProtectedRoute from './components/ProtectedRoute';
-
-/* Lazy Load - Guest */
-const LandingPage = React.lazy(() => import('./pages/guest/LandingPage'));
-const Login = React.lazy(() => import('./pages/guest/Login'));
-const Register = React.lazy(() => import('./pages/guest/Register'));
 
 /* Lazy Load - Admin */
 const DashboardAdmin = React.lazy(() => import('./pages/user/admin/Dashboard'));
