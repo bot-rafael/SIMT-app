@@ -7,11 +7,14 @@ export default function CardPelatihanUnggulan({
   badgeColor,
   category,
   rating,
-  durasi
+  durasi,
+  onClick
 }) {
   return (
-    <div className="w-80 rounded-2xl shadow-md bg-white overflow-hidden hover:shadow-xl transition-transform transform hover:scale-105">
-      {/* Gambar full */}
+    <div 
+      className="w-80 rounded-2xl shadow-md bg-white overflow-hidden hover:shadow-xl transition-transform transform hover:scale-105 cursor-pointer"
+      onClick={onClick}
+    >
       <div className="relative">
         <img src={imgSrc} alt={h2} className="w-full h-48 object-cover" />
         {label && (
@@ -21,7 +24,6 @@ export default function CardPelatihanUnggulan({
         )}
       </div>
 
-      {/* Konten */}
       <div className="p-5 text-black">
         <div className="flex justify-between items-center text-xs text-gray-500 mb-2">
           <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded">{category}</span>
@@ -32,11 +34,7 @@ export default function CardPelatihanUnggulan({
 
         <h2 className="text-base font-bold text-gray-800">{h2}</h2>
         <p className="text-sm text-gray-600 mt-1">{p}</p>
-
-        {durasi && (
-          <p className="text-xs text-gray-400 mt-1">{durasi}</p>
-        )}
-
+        {durasi && <p className="text-xs text-gray-400 mt-1">{durasi}</p>}
         <div className="flex justify-between items-center mt-4">
           <p className="text-blue-600 font-bold text-lg">Rp {harga}</p>
           <button className="bg-blue-500 text-white text-sm px-4 py-2 rounded-xl hover:bg-blue-600 transition">
