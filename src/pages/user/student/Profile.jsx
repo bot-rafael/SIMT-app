@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../../supabaseClient';
-import { Input, Button, Typography, Card, CardBody, CardHeader, Textarea } from '@material-tailwind/react';
+import { supabase } from '../../../supabaseClient';
+import { Input, Button, Typography, CardBody } from '@material-tailwind/react';
 
-export default function ProfileForm() {
+export default function Profile() {
   const [form, setForm] = useState({
     full_name: '',
     username: '',

@@ -2,23 +2,63 @@ import { useState } from 'react';
 import {
   Card, Input, Button, CardBody, CardHeader, Typography
 } from '@material-tailwind/react';
-import { CpuChipIcon } from '@heroicons/react/24/solid';
 import { supabase } from '../../supabaseClient';
 import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const { data, error } = await supabase.auth.signInWithPassword({
+    setError('');
+    setLoading(true);
+
+    // 1. Login dengan email dan password
+    const { data, error: loginError } = await supabase.auth.signInWithPassword({
       email: form.email,
       password: form.password,
     });
-    if (error) return setError(error.message);
-    navigate('/dashboard');
+
+    if (loginError) {
+      setError('Email atau password salah.');
+      setLoading(false);
+      return;
+    }
+
+    const user = data.user;
+
+    // 2. Ambil role dari tabel profiles
+    const { data: profile, error: profileError } = await supabase
+      .from('profiles')
+      .select('role')
+      .eq('user_id', user.id)
+      .maybeSingle();
+
+    if (profileError || !profile || !profile.role) {
+      setError('Gagal mengambil role user.');
+      setLoading(false);
+      return;
+    }
+
+    // 3. Redirect berdasarkan role
+    switch (profile.role) {
+      case 'Admin':
+        navigate('/admin');
+        break;
+      case 'Pelajar':
+        navigate('/pelajar');
+        break;
+      case 'Pengajar':
+        navigate('/pengajar');
+        break;
+      default:
+        setError('Role tidak dikenali.');
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -51,6 +91,7 @@ export default function Login() {
                 labelProps={{ className: 'hidden' }}
               />
             </div>
+
             <div>
               <label htmlFor="password">
                 <Typography variant="small" color="blue-gray" className="mb-2 block font-medium">
@@ -68,27 +109,13 @@ export default function Login() {
               />
             </div>
 
-            {error && <Typography className="text-sm text-red-500">{error}</Typography>}
+            {error && (
+              <Typography className="text-sm text-red-500">{error}</Typography>
+            )}
 
-            <Button size="lg" color="gray" type="submit" fullWidth>
-              Continue
+            <Button size="lg" color="gray" type="submit" fullWidth disabled={loading}>
+              {loading ? 'Logging in...' : 'Continue'}
             </Button>
-
-            <Button variant="outlined" size="lg" fullWidth className="flex h-12 items-center justify-center gap-2 border-blue-gray-200">
-              <img src="https://www.material-tailwind.com/logos/logo-google.png" alt="google" className="h-6 w-6" />
-              Sign in with Google
-            </Button>
-
-            <Button variant="outlined" size="lg" fullWidth className="flex h-12 items-center justify-center gap-2 border-blue-gray-200">
-              <CpuChipIcon className="h-6 w-6" />
-              Wallet Authentication
-            </Button>
-
-            <Typography variant="small" className="mx-auto max-w-[19rem] text-center !font-medium !text-gray-600">
-              By signing in, you agree to our{' '}
-              <a href="#" className="text-gray-900">Terms</a> &{' '}
-              <a href="#" className="text-gray-900">Privacy Policy</a>.
-            </Typography>
           </form>
         </CardBody>
       </Card>

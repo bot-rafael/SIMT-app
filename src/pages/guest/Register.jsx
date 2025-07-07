@@ -12,6 +12,8 @@ export default function Register() {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    setError('');
+
     const { data, error } = await supabase.auth.signUp({
       email: form.email,
       password: form.password,
@@ -19,7 +21,28 @@ export default function Register() {
         data: { name: form.name }
       }
     });
+
     if (error) return setError(error.message);
+
+    const user = data.user;
+
+    // Insert data ke tabel profiles
+    if (user) {
+      const { error: profileError } = await supabase.from('profiles').insert([
+        {
+          user_id: user.id,
+          full_name: form.name,
+          username: form.email.split('@')[0], // username default dari email
+          role: 'Pelajar',
+        }
+      ]);
+
+      if (profileError) {
+        console.error(profileError);
+        return setError('Registrasi berhasil, tetapi gagal menyimpan data profil.');
+      }
+    }
+
     navigate('/login');
   };
 
@@ -38,7 +61,9 @@ export default function Register() {
         <CardBody>
           <form className="flex flex-col gap-6 mt-6" onSubmit={handleRegister}>
             <div>
-              <Typography variant="small" color="blue-gray" className="mb-2 block font-medium">Your Name</Typography>
+              <Typography variant="small" color="blue-gray" className="mb-2 block font-medium">
+                Your Name
+              </Typography>
               <Input
                 id="name"
                 size="lg"
@@ -51,7 +76,9 @@ export default function Register() {
             </div>
 
             <div>
-              <Typography variant="small" color="blue-gray" className="mb-2 block font-medium">Your Email</Typography>
+              <Typography variant="small" color="blue-gray" className="mb-2 block font-medium">
+                Your Email
+              </Typography>
               <Input
                 id="email"
                 size="lg"
@@ -65,7 +92,9 @@ export default function Register() {
             </div>
 
             <div>
-              <Typography variant="small" color="blue-gray" className="mb-2 block font-medium">Password</Typography>
+              <Typography variant="small" color="blue-gray" className="mb-2 block font-medium">
+                Password
+              </Typography>
               <Input
                 id="password"
                 size="lg"
