@@ -70,10 +70,7 @@ export default function BenefitSection() {
       <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
 
       <div className="relative max-w-7xl mx-auto">
-        {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
-          {/* Left Side - Header Section */}
           <motion.div
             variants={headerVariants}
             initial="hidden"
@@ -121,8 +118,6 @@ export default function BenefitSection() {
               </div>
               <div className="flex-1 h-px bg-gradient-to-r from-blue-500/50 to-transparent" />
             </motion.div>
-
-            {/* Call to action hint */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -131,8 +126,6 @@ export default function BenefitSection() {
             >
             </motion.div>
           </motion.div>
-
-          {/* Right Side - Benefits Cards */}
           <motion.div
             variants={containerVariants}
             initial="hidden"

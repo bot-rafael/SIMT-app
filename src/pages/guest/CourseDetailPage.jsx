@@ -10,7 +10,6 @@ export default function LeadershipCourseDetail() {
   const [scrollY, setScrollY] = useState(0);
   const navigate = useNavigate();
 
-  // Refs for animated elements
   const titleRef = useRef(null);
   const imageRef = useRef(null);
   const statsRef = useRef(null);
@@ -35,8 +34,7 @@ export default function LeadershipCourseDetail() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
-    // Initialize animations on mount
+
     checkAnimationTriggers();
 
     return () => {
@@ -66,7 +64,6 @@ export default function LeadershipCourseDetail() {
     triggerAnimation(testimonialsRef, 'fadeInUp');
   };
 
-  // Add CSS animations to the component
   const animationStyles = `
     @keyframes fadeInUp {
       from {
@@ -291,10 +288,9 @@ export default function LeadershipCourseDetail() {
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      {/* Add animation styles */}
+
       <style>{animationStyles}</style>
 
-      {/* Floating Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 left-10 w-20 h-20 bg-blue-400/10 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-32 h-32 bg-indigo-400/10 rounded-full blur-xl animate-pulse delay-1000"></div>
@@ -305,7 +301,6 @@ export default function LeadershipCourseDetail() {
         ></div>
       </div>
 
-      {/* Header */}
       <div className="relative bg-white/80 backdrop-blur-sm shadow-lg border-b border-gray-200/50">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <button
@@ -317,7 +312,6 @@ export default function LeadershipCourseDetail() {
           </button>
           
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Course Image */}
             <div className="lg:w-1/2">
               <div 
                 ref={imageRef}
@@ -343,8 +337,7 @@ export default function LeadershipCourseDetail() {
                 </div>
               </div>
             </div>
-            
-            {/* Course Info */}
+
             <div className="lg:w-1/2">
               <div 
                 ref={titleRef}
@@ -379,8 +372,6 @@ export default function LeadershipCourseDetail() {
                   <span>{courseData.duration}</span>
                 </div>
               </div>
-              
-              {/* Stats Grid */}
               <div 
                 ref={statsRef}
                 className="grid grid-cols-3 gap-3 mb-6 animated fadeInRight"
@@ -444,8 +435,6 @@ export default function LeadershipCourseDetail() {
                   </div>
                 </div>
               </div>
-              
-              {/* Course Details */}
               <div className="grid grid-cols-2 gap-4 text-sm bg-white/50 rounded-xl p-4 border border-gray-200 animated fadeInUp delay-300">
                 <div className="flex items-center gap-2">
                   <User size={16} className="text-blue-500" />
@@ -471,8 +460,6 @@ export default function LeadershipCourseDetail() {
           </div>
         </div>
       </div>
-
-      {/* Key Features */}
       <div 
         ref={featuresRef}
         className="bg-white/60 backdrop-blur-sm py-12 border-b border-gray-200/50 animated fadeInUp"
@@ -494,8 +481,6 @@ export default function LeadershipCourseDetail() {
           </div>
         </div>
       </div>
-
-      {/* Trusted by companies */}
       <div className="bg-white/60 backdrop-blur-sm py-8 border-b border-gray-200/50 animated fadeInUp delay-200">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-center text-gray-600 mb-6 font-medium">
@@ -514,10 +499,7 @@ export default function LeadershipCourseDetail() {
           </div>
         </div>
       </div>
-
-      {/* Content */}
       <div className="max-w-7xl mx-auto px-4 py-8">
-        {/* Tabs */}
         <div className="flex gap-3 mb-8 overflow-x-auto pb-2 animated fadeInUp">
           <TabButton 
             id="overview" 
@@ -548,8 +530,6 @@ export default function LeadershipCourseDetail() {
             onClick={setActiveTab} 
           />
         </div>
-        
-        {/* Tab Content */}
         <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-200/50 p-8">
           {activeTab === 'overview' && (
             <div className="space-y-10">
@@ -758,8 +738,6 @@ export default function LeadershipCourseDetail() {
           )}
         </div>
       </div>
-
-      {/* Mobile Bottom Bar */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-40 animated fadeInUp">
         <div className="flex items-center justify-between">
           <div>
@@ -775,7 +753,6 @@ export default function LeadershipCourseDetail() {
   );
 }
 
-// Update FeatureCard to accept className prop
 const FeatureCard = ({ icon: Icon, title, description, className }) => (
   <div className={`bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-gray-200/50 hover:shadow-lg transition-all group ${className || ''}`}>
     <div className="flex items-center gap-4 mb-3">
@@ -788,7 +765,7 @@ const FeatureCard = ({ icon: Icon, title, description, className }) => (
   </div>
 );
 
-// StatCard remains the same
+
 const StatCard = ({ icon: Icon, value, label, color }) => (
   <div className={`bg-gradient-to-br ${color} rounded-xl p-4 text-white transform hover:scale-105 transition-all`}>
     <div className="flex items-center gap-3">
@@ -801,7 +778,6 @@ const StatCard = ({ icon: Icon, value, label, color }) => (
   </div>
 );
 
-// TabButton remains the same
 const TabButton = ({ id, label, icon: Icon, active, onClick }) => (
   <button
     onClick={() => onClick(id)}

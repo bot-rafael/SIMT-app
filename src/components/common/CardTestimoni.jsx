@@ -18,23 +18,18 @@ export default function CardTestimoni({ nama, jabatan, latarBelakang, testimoni,
       }}
       className="group relative bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 text-white rounded-3xl shadow-xl p-8 flex flex-col lg:flex-row items-center gap-8 max-w-5xl w-full overflow-hidden"
     >
-      {/* Background decorations */}
       <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20" />
       <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16" />
       <div className="absolute top-4 left-4 w-3 h-3 bg-white/30 rounded-full animate-pulse" />
       <div className="absolute bottom-8 right-8 w-2 h-2 bg-white/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-
-      {/* Quote icon */}
       <div className="absolute top-6 left-6 text-white/20 text-6xl font-serif">"</div>
 
-      {/* Text Section */}
       <motion.div 
         className="flex-1 relative z-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: (index * 0.2) + 0.3, duration: 0.6 }}
       >
-        {/* Rating stars */}
         <div className="flex items-center gap-1 mb-4">
           {[...Array(5)].map((_, i) => (
             <motion.svg
@@ -51,16 +46,12 @@ export default function CardTestimoni({ nama, jabatan, latarBelakang, testimoni,
           ))}
           <span className="ml-2 text-white/80 text-sm font-medium">({rating}/5)</span>
         </div>
-
-        {/* Testimonial text */}
         <motion.p 
           className="mb-6 text-lg leading-relaxed italic relative"
           whileHover={{ x: 2 }}
         >
           "{testimoni}"
         </motion.p>
-
-        {/* Personal info */}
         <div className="space-y-2">
           <motion.p 
             className="font-bold text-xl"
@@ -92,8 +83,6 @@ export default function CardTestimoni({ nama, jabatan, latarBelakang, testimoni,
           </motion.p>
         </div>
       </motion.div>
-
-      {/* Image Section */}
       <motion.div 
         className="flex-shrink-0 relative"
         initial={{ opacity: 0, scale: 0.8 }}
@@ -109,8 +98,6 @@ export default function CardTestimoni({ nama, jabatan, latarBelakang, testimoni,
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
             />
           </div>
-          
-          {/* Floating badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

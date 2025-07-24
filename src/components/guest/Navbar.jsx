@@ -17,7 +17,6 @@ export default function Navbar() {
     <nav className="h-20 bg-white shadow-lg border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo Section */}
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center space-x-3">
               <img
@@ -31,8 +30,6 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-
-          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {menuItems.map((item) => (
@@ -53,8 +50,6 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-
-          {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <button
               onClick={() => navigate('/register')}
@@ -69,8 +64,6 @@ export default function Navbar() {
               Masuk
             </button>
           </div>
-
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -104,8 +97,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
       <div
         className={`md:hidden transition-all duration-300 ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
@@ -129,8 +120,6 @@ export default function Navbar() {
               {item.name}
             </button>
           ))}
-
-          {/* Mobile Auth Buttons */}
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="flex flex-col space-y-2">
               <button

@@ -8,14 +8,10 @@ import KonsultasiSection from '../../components/guest/KonsultasiSection';
 export default function LandingPage() {
   return (
     <div className="min-h-screen w-full">
-       {/* Hero Section */}
       <section className="relative">
         <HeroSection />
       </section>
-
-       {/* Kategori Pelatihan Section */}
       <section className="relative bg-white">
-        {/* Curved top border to connect with hero */}
         <div className="absolute top-0 left-0 w-full overflow-hidden">
           <svg 
              className="relative block w-full h-16 md:h-24"
@@ -34,25 +30,18 @@ export default function LandingPage() {
         </div>
       </section>
 
-       {/* Pelatihan Unggulan Section */}
       <section className="relative bg-gradient-to-b from-blue-50 to-blue-100">
         <div className="relative z-10 py-16 md:py-24">
           <PelatihanUnggulan />
         </div>
        </section>
 
-       {/* Benefit Section */}
       <section className="bg-white grid place-items-center">
         <BenefitSection />
       </section>
-
-       {/* Konsultasi Section - Now using the separate component */}
         <section className="relative">
         <KonsultasiSection />
         </section>
-      
-
-       {/* Testimoni Section */}
       <section className="bg-white grid place-items-center p-16">
         <TestimoniSection />
       </section>

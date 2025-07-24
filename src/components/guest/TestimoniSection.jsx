@@ -83,11 +83,8 @@ export default function TestimoniSection() {
 
   return (
     <section className="relative px-6 md:px-16 py-16 bg-white overflow-hidden">
-      {/* Background decorations */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-500/5 to-transparent rounded-full -translate-x-48 -translate-y-48" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-yellow-500/5 to-transparent rounded-full translate-x-40 translate-y-40" />
-      
-      {/* Floating elements */}
       <div className="absolute top-32 right-1/4 w-4 h-4 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }} />
       <div className="absolute top-48 left-1/5 w-3 h-3 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }} />
       <div className="absolute bottom-40 right-1/5 w-2 h-2 bg-blue-300 rounded-full animate-bounce" style={{ animationDelay: '2s' }} />
@@ -99,7 +96,6 @@ export default function TestimoniSection() {
         viewport={{ once: true, amount: 0.3 }}
         className="max-w-7xl mx-auto"
       >
-        {/* Header */}
         <motion.div 
           variants={headerVariants}
           className="flex flex-col lg:flex-row justify-between items-center mb-16 gap-6"
@@ -131,7 +127,6 @@ export default function TestimoniSection() {
               <span className="font-semibold text-blue-600">Edu Pro</span>
             </motion.p>
 
-            {/* Stats */}
             <motion.div
               className="flex justify-center lg:justify-start items-center gap-6 mt-6"
               initial={{ opacity: 0, y: 20 }}
@@ -150,7 +145,6 @@ export default function TestimoniSection() {
             </motion.div>
           </div>
 
-          {/* Navigation buttons */}
           <motion.div 
             className="flex gap-3"
             initial={{ opacity: 0, x: 50 }}
@@ -180,7 +174,6 @@ export default function TestimoniSection() {
           </motion.div>
         </motion.div>
 
-        {/* Testimonial Card */}
         <motion.div
           key={currentIndex}
           initial={{ opacity: 0, y: 50 }}
@@ -195,7 +188,6 @@ export default function TestimoniSection() {
           />
         </motion.div>
 
-        {/* Indicators */}
         <motion.div 
           className="flex justify-center gap-3 mt-12"
           initial={{ opacity: 0, y: 30 }}
@@ -217,7 +209,6 @@ export default function TestimoniSection() {
           ))}
         </motion.div>
 
-        {/* Additional stats or call to action */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
