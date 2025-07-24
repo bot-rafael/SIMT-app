@@ -164,7 +164,6 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
         <div className="mb-8">
           <div className="flex items-center space-x-3 mb-3">
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-3 rounded-xl shadow-lg">
@@ -178,8 +177,6 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-
-        {/* Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           <StatCard 
             label="Total Pengguna" 
@@ -200,10 +197,7 @@ export default function Dashboard() {
             icon={<ChartBarIcon className="h-7 w-7" />}
           />
         </div>
-
-        {/* Charts Grid */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
-          {/* Monthly Training Chart */}
           <Card className="bg-white/70 backdrop-blur-sm shadow-xl border-0 hover:shadow-2xl transition-all duration-300">
             <CardBody className="p-6">
               <div className="flex items-center space-x-3 mb-6">
@@ -254,8 +248,6 @@ export default function Dashboard() {
               </ResponsiveContainer>
             </CardBody>
           </Card>
-
-          {/* Role Distribution Chart */}
           <Card className="bg-white/70 backdrop-blur-sm shadow-xl border-0 hover:shadow-2xl transition-all duration-300">
             <CardBody className="p-6">
               <div className="flex items-center space-x-3 mb-6">
@@ -302,8 +294,6 @@ export default function Dashboard() {
             </CardBody>
           </Card>
         </div>
-
-        {/* Weekly Activity Chart */}
         <Card className="bg-white/70 backdrop-blur-sm shadow-xl border-0 hover:shadow-2xl transition-all duration-300 mb-8">
           <CardBody className="p-6">
             <div className="flex items-center space-x-3 mb-6">
@@ -351,10 +341,7 @@ export default function Dashboard() {
             </ResponsiveContainer>
           </CardBody>
         </Card>
-
-        {/* Data Tables */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
-          {/* Latest Users Table */}
           <Card className="bg-white/70 backdrop-blur-sm shadow-xl border-0 hover:shadow-2xl transition-all duration-300">
             <CardBody className="p-6">
               <div className="flex items-center space-x-3 mb-6">
@@ -391,8 +378,6 @@ export default function Dashboard() {
               </div>
             </CardBody>
           </Card>
-
-          {/* Latest Training Table */}
           <Card className="bg-white/70 backdrop-blur-sm shadow-xl border-0 hover:shadow-2xl transition-all duration-300">
             <CardBody className="p-6">
               <div className="flex items-center space-x-3 mb-6">

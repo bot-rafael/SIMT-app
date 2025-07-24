@@ -38,7 +38,6 @@ export default function DataAnalysisCourseDetail() {
     };
   }, [scrollY, controls]);
 
-  // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -493,8 +492,7 @@ export default function DataAnalysisCourseDetail() {
                   <span>{courseData.duration}</span>
                 </motion.div>
               </motion.div>
-              
-              {/* Stats Grid */}
+
               <motion.div 
                 className="grid grid-cols-3 gap-3 mb-6"
                 variants={staggerContainer}
@@ -594,7 +592,6 @@ export default function DataAnalysisCourseDetail() {
         </div>
       </div>
 
-      {/* Key Features */}
       <motion.div 
         className="bg-white/60 backdrop-blur-sm py-12 border-b border-gray-200/50"
         initial={{ opacity: 0 }}
@@ -625,7 +622,6 @@ export default function DataAnalysisCourseDetail() {
         </div>
       </motion.div>
 
-      {/* Trusted by companies */}
       <motion.div 
         className="bg-white/60 backdrop-blur-sm py-8 border-b border-gray-200/50"
         initial={{ opacity: 0 }}
@@ -661,9 +657,7 @@ export default function DataAnalysisCourseDetail() {
         </div>
       </motion.div>
 
-      {/* Content */}
       <div className="max-w-7xl mx-auto px-4 py-8">
-        {/* Tabs */}
         <motion.div 
           className="flex gap-3 mb-8 overflow-x-auto pb-2"
           initial={{ opacity: 0, y: 20 }}
@@ -686,8 +680,7 @@ export default function DataAnalysisCourseDetail() {
             />
           ))}
         </motion.div>
-        
-        {/* Tab Content */}
+
         <motion.div 
           className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-200/50 p-8"
           initial={{ opacity: 0, y: 20 }}
@@ -1032,7 +1025,6 @@ export default function DataAnalysisCourseDetail() {
         </motion.div>
       </div>
 
-      {/* Mobile Bottom Bar */}
       <motion.div 
         className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-40"
         initial={{ y: 100 }}

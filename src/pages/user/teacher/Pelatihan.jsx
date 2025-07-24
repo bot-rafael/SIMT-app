@@ -94,7 +94,6 @@ export default function Pelatihan() {
     return loadingRegistration.has(id_pelatihan);
   };
 
-  // Filter pelatihan berdasarkan search term
   const filteredPelatihan = pelatihan.filter(item =>
     item.judul.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.deskripsi.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -104,7 +103,6 @@ export default function Pelatihan() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 p-6">
       <div className="max-w-6xl mx-auto">
-        {/* Header Section */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-4">
@@ -116,8 +114,7 @@ export default function Pelatihan() {
                 <p className="text-gray-600">Pilih pelatihan yang kamu ajar saat ini</p>
               </div>
             </div>
-            
-            {/* Stats */}
+
             <div className="flex space-x-4">
               <div className="bg-white rounded-lg px-4 py-2 shadow-md border border-blue-100">
                 <div className="text-lg font-bold text-blue-600">{registeredTrainings.size}</div>
@@ -130,7 +127,6 @@ export default function Pelatihan() {
             </div>
           </div>
 
-          {/* Search Bar */}
           <div className="relative mb-6">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
@@ -143,7 +139,6 @@ export default function Pelatihan() {
           </div>
         </div>
 
-        {/* Loading State */}
         {loading ? (
           <div className="flex flex-col items-center justify-center py-20">
             <Loader2 className="w-10 h-10 text-blue-500 animate-spin mb-4" />
@@ -151,9 +146,8 @@ export default function Pelatihan() {
           </div>
         ) : (
           <>
-            {/* List View */}
+
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-              {/* Table Header */}
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-4">
                 <div className="grid grid-cols-12 gap-4 text-white font-semibold text-sm">
                   <div className="col-span-4">Pelatihan</div>
@@ -165,7 +159,6 @@ export default function Pelatihan() {
                 </div>
               </div>
 
-              {/* Table Body */}
               <div className="divide-y divide-gray-100">
                 {filteredPelatihan.map((item, index) => (
                   <div 
@@ -177,7 +170,6 @@ export default function Pelatihan() {
                     }}
                   >
                     <div className="grid grid-cols-12 gap-4 items-center">
-                      {/* Pelatihan Info */}
                       <div className="col-span-4">
                         <div className="flex items-start space-x-3">
                           <div className="w-10 h-10 bg-gradient-to-r from-blue-100 to-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -190,7 +182,6 @@ export default function Pelatihan() {
                             <p className="text-sm text-gray-600 line-clamp-2 leading-relaxed">
                               {item.deskripsi}
                             </p>
-                            {/* Badges */}
                             <div className="flex items-center space-x-2 mt-2">
                               <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
                                 <Award className="w-3 h-3 mr-1" />
@@ -207,7 +198,6 @@ export default function Pelatihan() {
                         </div>
                       </div>
 
-                      {/* Instruktur */}
                       <div className="col-span-2">
                         <div className="flex items-center space-x-2">
                           <User className="w-4 h-4 text-gray-400" />
@@ -217,7 +207,6 @@ export default function Pelatihan() {
                         </div>
                       </div>
 
-                      {/* Tanggal */}
                       <div className="col-span-2">
                         <div className="flex items-center space-x-2">
                           <Calendar className="w-4 h-4 text-gray-400" />
@@ -227,7 +216,6 @@ export default function Pelatihan() {
                         </div>
                       </div>
 
-                      {/* Kuota */}
                       <div className="col-span-1">
                         <div className="flex items-center space-x-2">
                           <Users className="w-4 h-4 text-gray-400" />
@@ -237,7 +225,6 @@ export default function Pelatihan() {
                         </div>
                       </div>
 
-                      {/* Status */}
                       <div className="col-span-1">
                         {isRegistered(item.id_pelatihan) ? (
                           <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
@@ -256,7 +243,6 @@ export default function Pelatihan() {
                         )}
                       </div>
 
-                      {/* Action Button */}
                       <div className="col-span-2">
                         <button
                           onClick={() => !isRegistered(item.id_pelatihan) && !isLoadingRegistration(item.id_pelatihan) && handleDaftar(item.id_pelatihan)}
@@ -290,7 +276,6 @@ export default function Pelatihan() {
                 ))}
               </div>
 
-              {/* Empty State */}
               {filteredPelatihan.length === 0 && !loading && (
                 <div className="text-center py-16">
                   <BookOpen className="w-16 h-16 text-gray-300 mx-auto mb-4" />
@@ -304,7 +289,6 @@ export default function Pelatihan() {
               )}
             </div>
 
-            {/* Pagination */}
             {filteredPelatihan.length > 0 && (
               <div className="flex items-center justify-between mt-6">
                 <p className="text-sm text-gray-600">

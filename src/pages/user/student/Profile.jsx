@@ -43,7 +43,7 @@ export default function Profile() {
         if (data) {
           setForm(data);
           setHasData(true);
-          setIsEditing(false); // Set to view mode if data exists
+          setIsEditing(false); 
         }
         if (error && error.code !== 'PGRST116') {
           setError('Gagal mengambil data profil: ' + error.message);
@@ -76,8 +76,7 @@ export default function Profile() {
       } else {
         setSuccess('Profil berhasil disimpan! 🎉');
         setHasData(true);
-        setIsEditing(false); // Switch to view mode after save
-        // Clear success message after 5 seconds
+        setIsEditing(false); 
         setTimeout(() => setSuccess(''), 5000);
       }
     } catch (err) {
@@ -88,7 +87,6 @@ export default function Profile() {
 
   const handleInputChange = (field, value) => {
     setForm({ ...form, [field]: value });
-    // Clear messages when user starts typing
     if (error) setError('');
     if (success) setSuccess('');
   };
@@ -101,7 +99,7 @@ export default function Profile() {
 
   const handleCancel = () => {
     setIsEditing(false);
-    fetchProfile(); // Reset form to original data
+    fetchProfile(); 
     setError('');
     setSuccess('');
   };
@@ -152,8 +150,6 @@ export default function Profile() {
                   </Typography>
                 </div>
               </div>
-              
-              {/* Mode Indicator */}
               <div className="flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full">
                 {isEditing ? (
                   <>
@@ -171,7 +167,6 @@ export default function Profile() {
           </div>
         </div>
 
-        {/* Alert Messages */}
         {error && (
           <Alert
             icon={<ExclamationTriangleIcon className="h-6 w-6" />}
@@ -194,13 +189,10 @@ export default function Profile() {
           </Alert>
         )}
 
-        {/* Main Content Card */}
         <div className="bg-white rounded-2xl shadow-xl border-0">
           {isEditing ? (
-            /* EDIT MODE - FORM */
             <form onSubmit={handleSubmit}>
               <CardBody className="p-8">
-                {/* Personal Information Section */}
                 <div className="mb-8">
                   <div className="flex items-center space-x-3 mb-6">
                     <div className="bg-blue-100 p-2 rounded-lg">
@@ -254,7 +246,6 @@ export default function Profile() {
                   </div>
                 </div>
 
-                {/* Location & Birth Information */}
                 <div className="mb-8">
                   <div className="flex items-center space-x-3 mb-6">
                     <div className="bg-green-100 p-2 rounded-lg">
@@ -308,7 +299,6 @@ export default function Profile() {
                   </div>
                 </div>
 
-                {/* Education & Career */}
                 <div className="mb-8">
                   <div className="flex items-center space-x-3 mb-6">
                     <div className="bg-blue-100 p-2 rounded-lg">
@@ -362,7 +352,6 @@ export default function Profile() {
                   </div>
                 </div>
 
-                {/* Action Buttons */}
                 <div className="flex justify-between pt-6 border-t border-gray-200">
                   <div>
                     {hasData && (
@@ -399,9 +388,8 @@ export default function Profile() {
               </CardBody>
             </form>
           ) : (
-            /* VIEW MODE - DISPLAY DATA */
+
             <CardBody className="p-8">
-              {/* Personal Information Section */}
               <div className="mb-8">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-3">
@@ -438,7 +426,6 @@ export default function Profile() {
                 </div>
               </div>
 
-              {/* Location & Birth Information */}
               <div className="mb-8">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="bg-green-100 p-2 rounded-lg">
@@ -473,7 +460,6 @@ export default function Profile() {
                 </div>
               </div>
 
-              {/* Education & Career */}
               <div className="mb-8">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="bg-blue-100 p-2 rounded-lg">
@@ -506,7 +492,6 @@ export default function Profile() {
                 </div>
               </div>
 
-              {/* Edit Button */}
               <div className="flex justify-end pt-6 border-t border-gray-200">
                 <Button
                   onClick={handleEdit}
@@ -523,7 +508,6 @@ export default function Profile() {
           )}
         </div>
 
-        {/* Info Card */}
         <div className="mt-6 bg-blue-50 rounded-xl p-6 border border-blue-200">
           <div className="flex items-start space-x-3">
             <div className="bg-blue-100 p-2 rounded-full flex-shrink-0">

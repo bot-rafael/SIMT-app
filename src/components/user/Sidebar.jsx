@@ -75,9 +75,7 @@ export default function Sidebar({ role, user }) {
 
   return (
     <div className="relative z-50">
-      {/* Sidebar Desktop */}
       <div className="hidden md:flex md:flex-col w-72 h-screen bg-gradient-to-b from-white via-sky-50/30 to-blue-50/50 shadow-2xl border-r border-sky-200/50 fixed top-0 left-0 z-40 backdrop-blur-sm">
-        {/* Logo Section */}
         <div className="flex items-center h-20 px-6 space-x-3 border-b border-sky-200/30 bg-white/80 backdrop-blur-sm">
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-blue-500 rounded-xl blur opacity-20"></div>
@@ -91,7 +89,6 @@ export default function Sidebar({ role, user }) {
           </div>
         </div>
 
-        {/* Profile Section */}
         <div className="px-6 py-4 border-b border-sky-200/30 relative bg-white/50" ref={dropdownRef}>
           <button 
             onClick={() => setIsDropdownOpen(!isDropdownOpen)} 
@@ -125,7 +122,6 @@ export default function Sidebar({ role, user }) {
           )}
         </div>
 
-        {/* Navigation Menu */}
         <nav className="flex-1 px-6 py-4 space-y-2 overflow-y-auto">
           <div className="text-xs font-semibold text-sky-600 uppercase tracking-wider mb-4 px-4">
             Menu {role}
@@ -159,8 +155,6 @@ export default function Sidebar({ role, user }) {
             );
           })}
         </nav>
-
-        {/* Footer */}
         <div className="px-6 py-4 border-t border-sky-200/30 bg-white/30">
           <div className="text-center">
             <div className="text-xs text-sky-600 font-medium">EduPro Platform</div>
@@ -168,8 +162,6 @@ export default function Sidebar({ role, user }) {
           </div>
         </div>
       </div>
-
-      {/* Mobile Header */}
       <div className="md:hidden fixed top-0 left-0 right-0 h-16 bg-gradient-to-r from-sky-500 to-blue-600 shadow-lg z-[60] flex items-center justify-between px-4">
         <div className="flex items-center space-x-3">
           <img src={logo} alt="EduPro Logo" className="h-8 w-8 rounded-lg shadow-md" />
@@ -183,11 +175,7 @@ export default function Sidebar({ role, user }) {
           {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
         </button>
       </div>
-
-      {/* Mobile Sidebar */}
       <div className={`fixed top-16 left-0 w-80 h-full bg-gradient-to-b from-white via-sky-50/50 to-blue-50/50 shadow-2xl border-r border-sky-200/50 transform transition-transform duration-500 ease-out z-[55] ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden backdrop-blur-sm`}>
-        
-        {/* Mobile Profile */}
         <div className="px-6 py-4 border-b border-sky-200/30 bg-white/80">
           <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-sky-50/80">
             <img src={avatar} alt="User" className="h-10 w-10 rounded-full shadow-md border-2 border-white" />
@@ -199,8 +187,6 @@ export default function Sidebar({ role, user }) {
             </div>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
         <nav className="px-6 py-4 space-y-2 flex-1">
           <div className="text-xs font-semibold text-sky-600 uppercase tracking-wider mb-4 px-4">
             Menu {role}
@@ -227,7 +213,6 @@ export default function Sidebar({ role, user }) {
           })}
         </nav>
 
-        {/* Mobile Logout */}
         <div className="px-6 py-4 border-t border-sky-200/30 bg-white/50">
           <button 
             onClick={handleLogout} 
@@ -239,7 +224,6 @@ export default function Sidebar({ role, user }) {
         </div>
       </div>
 
-      {/* Mobile Overlay */}
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[54] md:hidden" 

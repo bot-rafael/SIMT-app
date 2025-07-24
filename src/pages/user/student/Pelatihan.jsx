@@ -215,7 +215,6 @@ export default function Pelatihan() {
         }
       `}</style>
       <div className="container mx-auto p-6">
-        {/* Header Section */}
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-l-8 border-blue-500 card-hover">
           <div className="flex items-center space-x-4">
             <div className="bg-blue-100 p-4 rounded-xl animate-bounce-hover">
@@ -324,7 +323,6 @@ export default function Pelatihan() {
                 </table>
               </div>
 
-              {/* Pagination */}
               <div className="bg-gray-50 px-6 py-4 flex items-center justify-between border-t border-gray-200">
                 <div className="text-sm text-gray-700">
                   Halaman {page}
@@ -356,7 +354,6 @@ export default function Pelatihan() {
           </>
         )}
 
-        {/* Registered Training Section */}
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
           <div className="bg-gradient-to-r from-indigo-600 to-indigo-700 p-6">
             <h2 className="text-2xl font-bold text-white flex items-center">
@@ -436,8 +433,6 @@ export default function Pelatihan() {
             </div>
           )}
         </div>
-
-        {/* Registration Modal */}
         {showModal && selectedPelatihan && (
           <div className={`fixed inset-0 bg-white/10 backdrop-blur-md flex items-center justify-center z-50 p-4${isClosingModal ? 'animate-fadeOut' : 'animate-fadeIn'}`}>
             <div className={`bg-white rounded-2xl shadow-2xl w-full max-w-md transform transition-all ${isClosingModal ? 'animate-modalSlideOut' : 'animate-modalSlideIn'}`}>

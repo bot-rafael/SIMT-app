@@ -43,17 +43,13 @@ export default function KategoriPelatihan() {
 
   return (
     <section className="relative py-20 px-6 md:px-16 bg-white overflow-hidden">
-      {/* Background decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full translate-x-48 -translate-y-48" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-blue-500/5 to-transparent rounded-full -translate-x-40 translate-y-40" />
-
-      {/* Floating elements */}
       <div className="absolute top-20 left-1/4 w-3 h-3 bg-blue-400 rounded-full animate-bounce" />
       <div className="absolute top-40 right-1/3 w-2 h-2 bg-blue-300 rounded-full animate-bounce" style={{ animationDelay: '1s' }} />
       <div className="absolute bottom-32 left-1/3 w-2.5 h-2.5 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '2s' }} />
 
       <div className="relative max-w-7xl mx-auto">
-        {/* Header Section */}
         <motion.div
           variants={headerVariants}
           initial="hidden"
@@ -88,7 +84,6 @@ export default function KategoriPelatihan() {
             <span className="font-semibold text-blue-600">kariermu</span>
           </motion.p>
 
-          {/* Stats */}
           <motion.div
             className="flex justify-center items-center gap-8 mt-8"
             initial={{ opacity: 0, y: 30 }}
@@ -111,7 +106,6 @@ export default function KategoriPelatihan() {
             </div>
           </motion.div>
 
-          {/* Decorative line */}
           <motion.div
             className="flex justify-center items-center gap-4 mt-8"
             initial={{ opacity: 0 }}
@@ -128,7 +122,6 @@ export default function KategoriPelatihan() {
           </motion.div>
         </motion.div>
 
-        {/* Cards Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -163,7 +156,6 @@ export default function KategoriPelatihan() {
           ))}
         </motion.div>
 
-        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

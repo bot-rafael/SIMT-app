@@ -32,10 +32,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-blue-900 text-white relative overflow-hidden">
-      {/* Animated top border */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-cyan-400 via-purple-400 to-pink-400 animate-pulse"></div>
-      
-      {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <div
@@ -53,11 +50,7 @@ export default function Footer() {
 
       <div className="relative z-10 px-6 lg:px-10 pt-24 pb-12">
         <div className="max-w-7xl mx-auto">
-          
-          {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
-
-            {/* Logo & Description */}
             <div className="lg:col-span-2 space-y-8">
               <div 
                 className="space-y-6 group"
@@ -103,7 +96,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Quick Links */}
             <div className="space-y-6">
               <h3 className="text-xl font-bold text-white relative flex items-center gap-2">
                 <span className="text-2xl">🔗</span>
@@ -127,7 +119,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Services */}
             <div className="space-y-6">
               <h3 className="text-xl font-bold text-white relative flex items-center gap-2">
                 <span className="text-2xl">🎯</span>
@@ -151,7 +142,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Contact Info */}
             <div className="space-y-6">
               <h3 className="text-xl font-bold text-white relative flex items-center gap-2">
                 <span className="text-2xl">📞</span>
@@ -202,7 +192,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Bottom Footer */}
           <div className="border-t border-blue-700/50 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex items-center gap-3">

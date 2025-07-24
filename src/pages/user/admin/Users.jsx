@@ -307,7 +307,7 @@ export default function Users() {
           <CardBody className="p-0">
             {/* Stunning Header */}
           <div className="bg-blue-500 p-8 relative overflow-hidden">
-              <div className="absolute inset-0 bg-black/10"></div>
+              <div className="absolute inset-0 bg-white/10"></div>
               
               {/* Animated Background Elements */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20 animate-pulse"></div>

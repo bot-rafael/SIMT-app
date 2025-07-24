@@ -30,7 +30,7 @@ export default function CommunicationCourseDetail() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    controls.start("visible"); // Trigger initial animations
+    controls.start("visible"); 
 
     return () => {
       clearInterval(timer);
@@ -38,7 +38,6 @@ export default function CommunicationCourseDetail() {
     };
   }, [scrollY, controls]);
 
-  // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -294,7 +293,6 @@ const courseData = {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      {/* Floating Elements with enhanced animations */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <motion.div 
           className="absolute top-20 left-10 w-20 h-20 bg-blue-400/10 rounded-full blur-xl"
@@ -349,7 +347,6 @@ const courseData = {
         ></motion.div>
       </div>
 
-      {/* Header with animations */}
       <div className="relative bg-white/80 backdrop-blur-sm shadow-lg border-b border-gray-200/50">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <motion.button
@@ -365,7 +362,6 @@ const courseData = {
           </motion.button>
           
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Course Image */}
             <motion.div 
               className="lg:w-1/2"
               initial="hidden"
@@ -412,8 +408,7 @@ const courseData = {
                 </div>
               </div>
             </motion.div>
-            
-            {/* Course Info */}
+
             <motion.div 
               className="lg:w-1/2"
               initial="hidden"
@@ -484,8 +479,7 @@ const courseData = {
                   <span>{courseData.duration}</span>
                 </motion.div>
               </motion.div>
-              
-              {/* Stats Grid */}
+
               <motion.div 
                 className="grid grid-cols-3 gap-3 mb-6"
                 variants={staggerContainer}
@@ -557,8 +551,7 @@ const courseData = {
                   </div>
                 </div>
               </motion.div>
-              
-              {/* Course Details */}
+
               <motion.div 
                 className="grid grid-cols-2 gap-4 text-sm bg-white/50 rounded-xl p-4 border border-gray-200"
                 initial={{ opacity: 0 }}
@@ -585,7 +578,6 @@ const courseData = {
         </div>
       </div>
 
-      {/* Key Features */}
       <motion.div 
         className="bg-white/60 backdrop-blur-sm py-12 border-b border-gray-200/50"
         initial={{ opacity: 0 }}
@@ -616,7 +608,6 @@ const courseData = {
         </div>
       </motion.div>
 
-      {/* Trusted by companies */}
       <motion.div 
         className="bg-white/60 backdrop-blur-sm py-8 border-b border-gray-200/50"
         initial={{ opacity: 0 }}
@@ -652,9 +643,8 @@ const courseData = {
         </div>
       </motion.div>
 
-      {/* Content */}
       <div className="max-w-7xl mx-auto px-4 py-8">
-        {/* Tabs */}
+
         <motion.div 
           className="flex gap-3 mb-8 overflow-x-auto pb-2"
           initial={{ opacity: 0, y: 20 }}
@@ -677,8 +667,7 @@ const courseData = {
             />
           ))}
         </motion.div>
-        
-        {/* Tab Content */}
+
         <motion.div 
           className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-200/50 p-8"
           initial={{ opacity: 0, y: 20 }}

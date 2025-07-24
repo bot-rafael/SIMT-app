@@ -10,23 +10,17 @@ const KonsultasiSection = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
-      {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-700 via-blue-600 to-blue-800">
-        {/* Floating Shapes */}
         <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
         <div className="absolute top-32 right-20 w-16 h-16 bg-white/10 rounded-full animate-bounce delay-300"></div>
         <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-700"></div>
         <div className="absolute bottom-32 right-1/3 w-24 h-24 bg-white/10 rounded-full animate-bounce delay-1000"></div>
-
-        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-transparent"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-20">
         <div className="flex flex-col lg:flex-row items-center gap-12">
 
-          {/* Text Content */}
           <motion.div
             className="lg:w-2/3 w-full text-center lg:text-left space-y-6"
             initial={{ opacity: 0, x: -60 }}
@@ -35,7 +29,6 @@ const KonsultasiSection = () => {
             viewport={{ once: true }}
           >
 
-            {/* Main Heading */}
             <div className="space-y-3">
               <h2 className="text-2xl md:text-3xl text-white/90 font-medium">
                 Masih Bingung Memilih Pelatihan?
@@ -51,13 +44,10 @@ const KonsultasiSection = () => {
                 Sekarang!
               </h1>
             </div>
-
-            {/* Description */}
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
               Dapatkan panduan personal dari admin ahli kami untuk memilih pelatihan yang tepat sesuai kebutuhan dan tujuan karir Anda.
             </p>
 
-            {/* Features List */}
             <div className="flex flex-col sm:flex-row gap-6 pt-4">
               {['Respons Cepat', '100% Gratis', 'Panduan Personal'].map((text, index) => (
                 <div key={index} className="flex items-center gap-3 text-white">
@@ -71,7 +61,6 @@ const KonsultasiSection = () => {
               ))}
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-blue-600 bg-white rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 <span className="mr-2">💬</span>
@@ -82,7 +71,6 @@ const KonsultasiSection = () => {
               </button>
             </div>
 
-            {/* Trust Indicators */}
             <div className="flex items-center gap-8 pt-8 text-white/70">
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">1000+</div>
@@ -99,7 +87,6 @@ const KonsultasiSection = () => {
             </div>
           </motion.div>
 
-          {/* Image/Illustration */}
           <motion.div
             className="lg:w-1/3 w-full flex justify-center"
             initial={{ opacity: 0, x: 60 }}
@@ -108,10 +95,7 @@ const KonsultasiSection = () => {
             viewport={{ once: true }}
           >
             <div className="relative">
-              {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
-
-              {/* Main Image Container */}
               <div className="relative bg-gradient-to-br from-white to-blue-50 rounded-full p-8 shadow-2xl">
                 <div className="w-72 h-72 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center overflow-hidden">
                   <img
@@ -120,8 +104,6 @@ const KonsultasiSection = () => {
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>
-
-                {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 bg-green-400 text-white p-3 rounded-full shadow-lg animate-bounce">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
