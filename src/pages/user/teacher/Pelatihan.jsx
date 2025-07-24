@@ -102,13 +102,13 @@ export default function Pelatihan() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 p-6">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
                 <GraduationCap className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -154,7 +154,7 @@ export default function Pelatihan() {
             {/* List View */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
               {/* Table Header */}
-              <div className="bg-gradient-to-r from-blue-500 to-indigo-600 px-6 py-4">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-4">
                 <div className="grid grid-cols-12 gap-4 text-white font-semibold text-sm">
                   <div className="col-span-4">Pelatihan</div>
                   <div className="col-span-2">Instruktur</div>
@@ -180,7 +180,7 @@ export default function Pelatihan() {
                       {/* Pelatihan Info */}
                       <div className="col-span-4">
                         <div className="flex items-start space-x-3">
-                          <div className="w-10 h-10 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <div className="w-10 h-10 bg-gradient-to-r from-blue-100 to-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <BookOpen className="w-5 h-5 text-blue-600" />
                           </div>
                           <div className="min-w-0 flex-1">
@@ -264,7 +264,7 @@ export default function Pelatihan() {
                           className={`w-full px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center justify-center ${
                             isRegistered(item.id_pelatihan)
                               ? 'bg-emerald-500 text-white cursor-default'
-                              : 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-blue-600 hover:to-indigo-700 hover:shadow-md transform hover:scale-105'
+                              : 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 hover:shadow-md transform hover:scale-105'
                           }`}
                         >
                           {isLoadingRegistration(item.id_pelatihan) ? (
@@ -321,7 +321,7 @@ export default function Pelatihan() {
                     Prev
                   </button>
                   
-                  <span className="px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium rounded-lg shadow-sm">
+                  <span className="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg shadow-sm">
                     {page}
                   </span>
                   
