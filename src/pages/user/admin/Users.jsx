@@ -230,13 +230,13 @@ export default function Users() {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-lg">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg">
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                 </svg>
               </div>
               <div>
-                <Typography variant="h4" className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">
+                <Typography variant="h4" className="bg-gradient-to-r from-blue-600 to-blue-600 bg-clip-text text-transparent font-bold">
                   Manajemen Pengguna
                 </Typography>
                 <Typography className="text-sm text-slate-600 font-medium">
@@ -247,7 +247,7 @@ export default function Users() {
           </div>
           
           <Button 
-            className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1" 
+            className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-600 hover:from-blue-700 hover:to-blue-700 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1" 
             onClick={() => {
               setEditMode(false);
               setOpenModal(true);
@@ -287,9 +287,9 @@ export default function Users() {
                       setPage(1);
                       setFilterRole(value);
                     }}
-                    className="!border-2 !border-purple-200 focus:!border-purple-500"
+                    className="!border-2 !border-blue-200 focus:!border-blue-500"
                     labelProps={{
-                      className: "!text-purple-600 font-semibold"
+                      className: "!text-blue-600 font-semibold"
                     }}
                   >
                     <Option value="Semua">Semua Role</Option>
@@ -306,7 +306,7 @@ export default function Users() {
         <Card className="overflow-hidden shadow-2xl border-0 bg-white/90 backdrop-blur-sm">
           <CardBody className="p-0">
             {/* Stunning Header */}
-            <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 p-8 relative overflow-hidden">
+          <div className="bg-blue-500 p-8 relative overflow-hidden">
               <div className="absolute inset-0 bg-black/10"></div>
               
               {/* Animated Background Elements */}
@@ -400,8 +400,8 @@ export default function Users() {
                     </th>
                     <th className="px-8 py-6 text-left">
                       <div className="flex items-center gap-3 group cursor-pointer">
-                        <div className="p-2 bg-purple-100 rounded-xl group-hover:bg-purple-200 transition-all duration-300 group-hover:scale-110">
-                          <svg className="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                        <div className="p-2 bg-blue-100 rounded-xl group-hover:bg-blue-200 transition-all duration-300 group-hover:scale-110">
+                          <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
                           </svg>
                         </div>
@@ -466,7 +466,7 @@ export default function Users() {
                     <tr 
                       key={user.user_id} 
                       className={`
-                        transition-all duration-500 hover:bg-gradient-to-r hover:from-blue-50 hover:via-purple-50 hover:to-pink-50
+                        transition-all duration-500 hover:bg-gradient-to-r hover:from-blue-50 hover:via-blue-50 hover:to-pink-50
                         ${index % 2 === 0 ? 'bg-white' : 'bg-gradient-to-r from-slate-50/50 to-blue-50/30'}
                         group cursor-pointer hover:shadow-xl hover:scale-[1.02] transform-gpu border-l-4 hover:border-l-indigo-500
                       `}
@@ -474,7 +474,7 @@ export default function Users() {
                       <td className="px-8 py-6 whitespace-nowrap">
                         <div className="flex items-center gap-4">
                           <div className="relative">
-                            <div className="flex-shrink-0 h-12 w-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300">
+                            <div className="flex-shrink-0 h-12 w-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300">
                               <span className="text-white text-lg font-bold">
                                 {user.email ? user.email.charAt(0).toUpperCase() : '?'}
                               </span>
@@ -501,7 +501,7 @@ export default function Users() {
                       
                       <td className="px-8 py-6 whitespace-nowrap">
                         <div className="inline-flex items-center">
-                          <span className="text-sm text-slate-700 bg-gradient-to-r from-purple-100 to-blue-100 px-4 py-2 rounded-xl font-mono font-bold group-hover:from-purple-200 group-hover:to-blue-200 transition-all duration-300 shadow-md group-hover:shadow-lg">
+                          <span className="text-sm text-slate-700 bg-gradient-to-r from-blue-100 to-blue-100 px-4 py-2 rounded-xl font-mono font-bold group-hover:from-blue-200 group-hover:to-blue-200 transition-all duration-300 shadow-md group-hover:shadow-lg">
                             @{user.username || 'unknown'}
                           </span>
                         </div>
@@ -543,11 +543,11 @@ export default function Users() {
                           <Button
                             size="sm"
                             variant="outlined"
-                            color="purple"
+                            color="blue"
                             className="
                               flex items-center gap-2 px-4 py-2 text-xs font-bold
-                              bg-gradient-to-r from-purple-50 to-indigo-50 border-2 border-purple-200 text-purple-700 
-                              hover:from-purple-100 hover:to-indigo-100 hover:border-purple-300 hover:text-purple-800
+                              bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 text-blue-700 
+                              hover:from-blue-100 hover:to-indigo-100 hover:border-blue-300 hover:text-blue-800
                               transition-all duration-300 transform hover:scale-110 hover:rotate-2
                               shadow-lg hover:shadow-xl rounded-xl
                             "
@@ -583,7 +583,7 @@ export default function Users() {
               {/* Enhanced Empty state */}
               {!loading && users.length === 0 && (
                 <div className="text-center py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-                  <div className="mx-auto w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-200 rounded-3xl flex items-center justify-center mb-8 shadow-2xl animate-bounce">
+                  <div className="mx-auto w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl flex items-center justify-center mb-8 shadow-2xl animate-bounce">
                     <svg className="w-16 h-16 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-4.5a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
                     </svg>
@@ -593,7 +593,8 @@ export default function Users() {
                     Sistem belum memiliki data pengguna. Mulai dengan menambahkan pengguna pertama untuk memulai manajemen data pembelajaran.
                   </p>
                   <Button 
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                    className="bg-blue-500 p-8 relative overflow-hidden"
+
                     onClick={() => {
                       setEditMode(false);
                       setOpenModal(true);
@@ -626,7 +627,7 @@ export default function Users() {
                     </div>
                     <div>
                       <Typography className="text-sm font-bold text-slate-700">
-                        Halaman <span className="text-blue-600 bg-blue-100 px-2 py-1 rounded-lg">{page}</span> dari <span className="text-purple-600 bg-purple-100 px-2 py-1 rounded-lg">{totalPages}</span>
+                        Halaman <span className="text-blue-600 bg-blue-100 px-2 py-1 rounded-lg">{page}</span> dari <span className="text-blue-600 bg-blue-100 px-2 py-1 rounded-lg">{totalPages}</span>
                       </Typography>
                       <Typography className="text-xs text-slate-500">
                         📊 Total {users.length} pengguna ditampilkan
@@ -659,7 +660,7 @@ export default function Users() {
                           className={`
                             w-10 h-10 rounded-xl font-bold transition-all duration-300
                             ${isActive 
-                              ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg' 
+                              ? 'bg-gradient-to-r from-blue-500 to-blue-500 text-white shadow-lg' 
                               : 'bg-white text-slate-600 border-2 border-slate-200 hover:border-blue-300 hover:text-blue-600'
                             }
                           `}
@@ -675,7 +676,7 @@ export default function Users() {
                     size="sm" 
                     disabled={page === totalPages || totalPages === 0} 
                     onClick={() => setPage((p) => p + 1)}
-                    className="flex items-center gap-2 disabled:opacity-50 bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 font-semibold px-4 py-2 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                    className="flex items-center gap-2 disabled:opacity-50 bg-gradient-to-r from-blue-500 to-blue-500 text-white hover:from-blue-600 hover:to-blue-600 font-semibold px-4 py-2 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     Berikutnya
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -691,7 +692,7 @@ export default function Users() {
         {/* Enhanced Modal */}
         <Dialog open={openModal} handler={setOpenModal} size="xl" className="bg-transparent shadow-2xl">
           <div className="bg-white rounded-2xl overflow-hidden shadow-2xl border-0">
-            <DialogHeader className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-t-2xl">
+            <DialogHeader className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white p-8 rounded-t-2xl">
               <div className="flex items-center gap-4 w-full">
                 <div className="p-3 bg-white/20 rounded-2xl backdrop-blur-sm">
                   <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
@@ -732,8 +733,8 @@ export default function Users() {
                         name="password" 
                         value={form.password} 
                         onChange={handleInputChange}
-                        className="!border-2 !border-purple-200 focus:!border-purple-500"
-                        labelProps={{ className: "!text-purple-600 font-semibold" }}
+                        className="!border-2 !border-blue-200 focus:!border-blue-500"
+                        labelProps={{ className: "!text-blue-600 font-semibold" }}
                       />
                     </div>
                   )}
@@ -875,7 +876,7 @@ export default function Users() {
                 </Button>
                 <Button 
                   onClick={editMode ? handleUpdateUser : handleAddUser} 
-                  className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                 >
                   {editMode ? '💾 Perbarui Data' : '➕ Simpan Pengguna'}
                 </Button>
